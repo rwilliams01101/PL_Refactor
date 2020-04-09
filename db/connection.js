@@ -15,7 +15,7 @@ connection.connect();
 // i.e. .then() and .catch()
 connection.query = util.promisify(connection.query);
 
-module.exports = connection;
+module.exports = (connection);
 
 // WITHOUT PROMISIFY
 // connection.query('SELECT * FROM books', function(err, results){
