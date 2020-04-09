@@ -2,7 +2,7 @@
   "name": "personal-library",
   "version": "1.0.0",
   "description": "## Instructions",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "node": "^13.12.0"
   }
 }
