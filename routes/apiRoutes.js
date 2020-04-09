@@ -2,6 +2,12 @@ const db = require('../db')
 
 module.exports = (app) => {
 
+  app.get('/', (req, res) => {
+    db.getAllBooks()
+     .then(results => res.json(results))
+     .catch(error => res.json(error))
+   });
+
   app.get('/api/books', (req, res) => {
    db.getAllBooks()
     .then(results => res.json(results))
