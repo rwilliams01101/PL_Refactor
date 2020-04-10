@@ -1,8 +1,7 @@
-DROP DATABASE IF EXISTS library_db;
-CREATE DATABASE library_db;
+CREATE DATABASE heroku_e465ac807051979;
 
 -- tells mysql that we are going to start interacting with library_db
-USE library_db;
+USE heroku_e465ac807051979;
 
 CREATE TABLE authors (
   id INT AUTO_INCREMENT PRIMARY KEY,
