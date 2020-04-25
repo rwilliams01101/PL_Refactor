@@ -2,21 +2,17 @@ const mysql = require('mysql');
 const util = require('util');
 
 const connection = mysql.createConnection({
-    host: 'us-cdbr-iron-east-01.cleardb.net',
+    host: 'localhost',
     port: 3306,
-    user: 'beb1b958992696',
-    password: 'd2baec71',
-    database: 'heroku_e465ac807051979'
+    user: 'root',
+    password: '',
+    database: 'library_db'
   });
 
-  connection.connect(function (err) {
-    if (err) {
-      console.error("Connection error: " + err.stack);
-      return;
-    }
-    console.log("Connected as ID: " + connection.threadId);
-  });
-  
-  connection.query = util.promisify(connection.query);
-  
-  module.exports = connection;
+connection.connect();
+
+// we give connection.query access to promises
+// i.e. .then() and .catch()
+connection.query = util.promisify(connection.query);
+
+module.exports = connection;
