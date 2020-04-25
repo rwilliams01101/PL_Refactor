@@ -1,7 +1,8 @@
-CREATE DATABASE heroku_e465ac807051979;
+DROP DATABASE IF EXISTS p61un5t1lu8zcou0;
+CREATE DATABASE p61un5t1lu8zcou0;
 
 -- tells mysql that we are going to start interacting with library_db
-USE heroku_e465ac807051979;
+USE p61un5t1lu8zcou0;
 
 CREATE TABLE authors (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -26,9 +27,10 @@ CREATE TABLE notes (
 
 INSERT INTO authors (firstName, lastName) VALUES ('J. K.', 'Rowling');
 INSERT INTO authors (firstName, lastName) VALUES ('Mark', 'Twain');
+INSERT INTO authors (firstName, lastName) VALUES ('Alexandre', 'Dumas');
 
 INSERT INTO books (title, authorId, coverPhoto) VALUES ("Harry Potter and the Sorcerer\'s Stone", 1, 'https://m.media-amazon.com/images/I/41lnLrvBnML.jpg');
-
+INSERT INTO books (title, authorId, coverPhoto) VALUES ("Le Comte de Monte Cristo", 3, 'https://images-na.ssl-images-amazon.com/images/I/51kW64ASZDL._SX349_BO1,204,203,200_.jpg')
 INSERT INTO books (title, authorId, coverPhoto) VALUES ('Harry Potter and the Chamber of Secrets', 1, 'https://m.media-amazon.com/images/I/51OZerWcGCL.jpg');
 
 SELECT firstName, lastName, title 
